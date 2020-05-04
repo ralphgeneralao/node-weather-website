@@ -6,9 +6,6 @@ const geocode = (address, callback) => {
   )}.json?access_token=pk.eyJ1IjoicmFscGhnZW5lcmFsYW8iLCJhIjoiY2s5amQwY3E1MWozYjNlb2J1NWJsMzR2biJ9.RA2GsH8v6kv2HWV_Zx6lcg&limit=1`;
 
   request({ url, json: true }, (error, { body }) => {
-    // const { features } = body;
-    // const { center, place_name } = features[0];
-
     if (error) {
       callback("Unable to connect to location services", undefined);
     } else if (body.features.length === 0) {
